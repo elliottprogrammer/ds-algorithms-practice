@@ -1,0 +1,22 @@
+{
+  "name": "ds-algorithms-practice",
+  "version": "1.0.0",
+  "description": "Practice data structures and algorithims.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elliottprogrammer/ds-algorithms-practice.git"
+  },
+  "author": "Bryan Elliott - @elliottprogrammer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elliottprogrammer/ds-algorithms-practice/issues"
+  },
+  "homepage": "https://github.com/elliottprogrammer/ds-algorithms-practice#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
