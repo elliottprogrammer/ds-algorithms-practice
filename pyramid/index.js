@@ -55,26 +55,23 @@
 function pyramid(n, row = 0, col = 0, stair = '') {
     const max = n * 2 - 1;
     const middle = Math.floor( max / 2 );
+
     if (row > n - 1) {
         return;
     }
-    if (col > max - 1) {
-        console.log(stair);
-        
-    }
+
     if ( col >= middle - row && col <= middle + row ) {
         stair = stair + '#';
     } else {
         stair = stair + ' ';
     }
+
     if (col >= max - 1) {
         console.log(stair);
         return pyramid(n, row+1, 0, '');
     } else {
         return pyramid(n, row, col+1, stair);
     }
-
-    
 }
 
 
