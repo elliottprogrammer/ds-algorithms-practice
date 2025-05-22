@@ -20,7 +20,7 @@
 //     return arr[n];
 // }
 
-// Recursive solution
+// Recursive solution (My take.. It seems to work!!)
 function fib(n, arr = [0,1], i = 1) {
     if (i >= n) {
         return arr[n];
@@ -31,6 +31,15 @@ function fib(n, arr = [0,1], i = 1) {
     
     return fib(n, arr, i + 1);
 
+}
+
+// Recursive solution (memorize this!)
+function fib(n, arr = [0,1], i = 1) {
+    if (n < 2) {
+        return n;
+    }
+    
+    return fib(n - 1) + fib(n - 2);
 }
 
 module.exports = fib;
