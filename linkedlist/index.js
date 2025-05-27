@@ -15,7 +15,7 @@ class LinkedList {
     }
 
     insertFirst(data) {
-        this.head = new Node(data, this.head);;
+        this.head = new Node(data, this.head);
     }
 
     size() {
@@ -48,6 +48,37 @@ class LinkedList {
         }
 
         return node;
+    }
+
+    clear() {
+        this.head = null;
+    }
+
+    removeFirst() {
+        if (this.head) {
+            this.head = this.head.next;
+        }
+    }
+
+    removeLast() {
+        if (!this.head) {
+            return;
+        }
+
+        if (this.size() === 1) {
+            this.head = null;
+        }
+
+        let node = this.head;
+        let prevNode = null;
+        while(node) {
+            if (node.next === null) {
+                prevNode.next = null;
+                return;
+            }
+            prevNode = node;
+            node = node.next;
+        }
     }
 }
 
