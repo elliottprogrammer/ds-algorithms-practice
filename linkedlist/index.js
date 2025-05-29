@@ -46,8 +46,6 @@ class LinkedList {
             }
             node = node.next;
         }
-
-        return node;
     }
 
     clear() {
@@ -83,7 +81,8 @@ class LinkedList {
 
     insertLast(data) {
         if (!this.head) {
-            this.head.next = new Node(data);
+            this.head = new Node(data);
+            return;
         }
         const last = this.getLast();
         last.next = new Node(data);

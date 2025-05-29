@@ -145,6 +145,14 @@ describe('InsertLast', () => {
     expect(l.size()).toEqual(2);
     expect(l.getLast().data).toEqual('b');
   });
+
+  test('adds to the head when list is empty', () => {
+    const l = new List();
+    l.insertLast('a');
+
+    expect(l.size()).toEqual(1);
+    expect(l.getLast().data).toEqual('a');
+  });
 });
 
 describe.skip('GetAt', () => {
